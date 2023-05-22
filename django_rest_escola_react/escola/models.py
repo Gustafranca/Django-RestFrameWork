@@ -35,5 +35,10 @@ class Matricula(models.Model):
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
     periodo = models.CharField(max_length=1, choices=PERIODO, blank=False, null=False,default='M')
     
-    
+class Imagem(models.Model):
+    descricao = models.CharField(max_length=30)
+    foto = models.ImageField()
+
+    def __str__(self):
+        return self.descricao
 
