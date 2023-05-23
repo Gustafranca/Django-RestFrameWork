@@ -8,7 +8,8 @@ class Programa(models.Model):
     data_lancamento = models.DateField()
     likes = models.PositiveIntegerField(default=0)
     dislikes= models.PositiveIntegerField(default=0)
-
+ 
     def __str__(self):
         return self.titulo
+    
     
