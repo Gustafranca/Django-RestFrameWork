@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from escola.models import Aluno, Curso, Matricula, Imagem
+from escola.models import Aluno, Curso, Matricula
 
 class AlunoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Aluno
-        fields = ['id', 'nome', 'rg', 'cpf', 'data_nascimento']
+        fields = ['id', 'nome', 'rg', 'cpf', 'data_nascimento','foto']
 
 class CursoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -34,10 +34,5 @@ class ListaAlunosMatriculadosSerializer(serializers.ModelSerializer):
 class AlunoSerializerV2(serializers.ModelSerializer):
     class Meta:
         model = Aluno
-        fields = ['id', 'nome','celular', 'rg', 'cpf', 'data_nascimento']
+        fields = ['id', 'nome','celular', 'rg', 'cpf', 'data_nascimento','foto']
         
-class ImagemSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Imagem
-        fields = '__all__'
